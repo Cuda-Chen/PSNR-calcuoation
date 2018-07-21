@@ -35,6 +35,7 @@ int main(int argc, char **argv)
 		cerr << "cannot read file: " << argv[1] << endl;
 		return -1;
 	}
+	cout << argv[1] << endl;
 
 	// read processedFile
 	bima = Read_BMP_To_1D(argv[2], &nrNew, &ncNew, &depthNew);
@@ -43,6 +44,7 @@ int main(int argc, char **argv)
 		cerr << "cannot read file: " << argv[2] << endl;
 		return -1;
 	}
+	cout << argv[2] << endl;
 
 	pair<double, double> retvalData = calculatePSNR(ima, bima, nr, nc);
 
