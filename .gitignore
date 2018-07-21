@@ -30,7 +30,7 @@
 *.exe
 *.out
 *.app
-imageEnhancementComparison
+PSNRCalculation
 
 # build folder
 [Bb]uild/

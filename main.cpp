@@ -50,7 +50,7 @@ int main(int argc, char **argv)
 		<< "PSNR: " << retvalData.second << endl;
 
 	// write MSE and PSNR to csv file
-	ofstream output;
+	/*ofstream output;
 	output.open("mse_psnr.csv", ofstream::out | ofstream::app);
 	if(!output.is_open())
 	{
@@ -58,7 +58,7 @@ int main(int argc, char **argv)
 		return -1;
 	}
 	output << argv[2] << "," << retvalData.first << "," << retvalData.second  << endl;
-	output.close();
+	output.close();*/
 
 	free(ima);
 	free(bima);
@@ -81,7 +81,8 @@ pair<double, double> calculatePSNR(unsigned char* in, unsigned char* out, int nr
                         sum += diff * diff;
                 }
         }
-        MSE = (double)sum / (nr * nc);
+        //MSE = (double)sum / (nr * nc);
+	MSE = abs((double)sum / (nr * nc));
         PSNR = 10.0f * log10((double)max * max / MSE);
 
         return make_pair(MSE, PSNR);
