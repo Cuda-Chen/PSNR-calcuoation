@@ -62,3 +62,6 @@ Thumbs.db
 !house.bmp
 !jetplane.bmp
 !input.bmp
+
+# do not track csv files as they are just output
+*.csv

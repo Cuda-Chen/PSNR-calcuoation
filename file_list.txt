@@ -1,0 +1,2 @@
+miat.bmp miat_1_2.bmp
+miat.bmp miat_1_5.bmp
